@@ -107,3 +107,6 @@ public class MemberServiceImpl implements MemberService {
 * 생성자 주입: 생성자를 통해서 이 객체가 일하는 데 필요한 다른 객체(의존성)를 전달받는 방식. (의존관계 주입을 위한 방법)
 * 의존관계 주입(DI): "부품을 밖에서 넣어준다"는 전략.
 
+<img width="825" height="550" alt="image" src="https://github.com/user-attachments/assets/dbd5da20-f8da-4ac2-a0d8-8c9a42e67a81" />
+
+<img width="819" height="593" alt="image" src="https://github.com/user-attachments/assets/2d7f34df-1289-478c-a2dd-8bcc6894d454" />
