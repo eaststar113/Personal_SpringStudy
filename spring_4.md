@@ -1,4 +1,4 @@
-## gg
+## 스프링 핵심 원리 이해2 - 객체 지향 원리 적용
 
 
 <img width="816" height="391" alt="image" src="https://github.com/user-attachments/assets/151dc32c-f90f-49fe-b197-388a75d052a5" />
@@ -83,6 +83,7 @@ public class AppConfig {
 }
     
 ```
+* appconfig : 객체의 생성과 연결을 담당
 
 ```java
 package hello.core.member;
@@ -92,7 +93,7 @@ public class MemberServiceImpl implements MemberService {
   private final MemberRepository memberRepository;
 
   public MemberServiceImpl(MemberRepository memberRepository) {
-    this.memberRepository = memberRepository;  ## 인터페이스에만 의존하고 어떤 구현 객체가 들어올지 appconfig(외부)에서 결정되기에 생성자 주입이라고 함
+    this.memberRepository = memberRepository;  ## 인터페이스에만 의존하고 어떤 구현 객체가 들어올지 appconfig(외부)에서 결정되기에 생성자 주입이라고 함, DIP 완성, 다형성에 의해서 뭔가가 들어옴
   }
   public void join(Member member) {
     memberRepository.save(member);
@@ -103,4 +104,6 @@ public class MemberServiceImpl implements MemberService {
 }
 ```
 * 생성자 : 객체가 생성될 때 딱 한 번 호출되는 특수한 메서드, 객체가 만들어질 때 호출되는 초기화 함수
-* 생성자 주입: 생성자를 통해서 이 객체가 일하는 데 필요한 다른 객체(의존성)를 전달받는 방식.
+* 생성자 주입: 생성자를 통해서 이 객체가 일하는 데 필요한 다른 객체(의존성)를 전달받는 방식. (의존관계 주입을 위한 방법)
+* 의존관계 주입(DI): "부품을 밖에서 넣어준다"는 전략.
+
